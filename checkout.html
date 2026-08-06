@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Nexus Tech</title>
+  <meta name="description" content="Checkout fake da loja demo Nexus Tech." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/tracking.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__name">Nexus <span>Tech</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a class="cart-link" href="carrinho.html">
+          Carrinho
+          <span class="cart-link__badge" data-cart-count hidden>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Preencha os dados abaixo. Nenhum pagamento real é processado.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container checkout-layout">
+        <form class="form-card" data-checkout-form>
+          <h2>Dados da entrega</h2>
+          <p class="notice">
+            Esta loja é apenas demonstração. Ao confirmar, o evento
+            <strong>purchase</strong> é enviado ao WebScanner e o carrinho é limpo.
+          </p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Nome completo</label>
+              <input id="name" name="name" type="text" required autocomplete="name" placeholder="Ana Silva" />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="ana@email.com" />
+            </div>
+            <div class="field">
+              <label for="address">Endereço</label>
+              <input id="address" name="address" type="text" required autocomplete="street-address" placeholder="Rua Exemplo, 123" />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="city">Cidade</label>
+                <input id="city" name="city" type="text" required autocomplete="address-level2" placeholder="São Paulo" />
+              </div>
+              <div class="field">
+                <label for="cep">CEP</label>
+                <input id="cep" name="cep" type="text" required autocomplete="postal-code" placeholder="01000-000" />
+              </div>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Confirmar pedido</button>
+          </div>
+        </form>
+
+        <aside class="summary-card">
+          <h2>Total do pedido</h2>
+          <div class="cart-summary__line">
+            <span>Valor</span>
+            <strong data-checkout-total>R$ 0</strong>
+          </div>
+          <p class="notice" style="margin-top: 1rem; margin-bottom: 0;">
+            Frete e pagamento são simulados. Use para gerar a jornada completa no dashboard.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Nexus Tech — loja demo para tracking.</p>
+      <p><a href="carrinho.html">Voltar ao carrinho</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos — Nexus Tech</title>
+  <meta name="description" content="Catálogo Nexus Tech: notebooks, smartphones, áudio e wearables." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/tracking.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">N</span>
+        <span class="brand__name">Nexus <span>Tech</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a class="is-active" href="produtos.html">Produtos</a>
+        <a class="cart-link" href="carrinho.html">
+          Carrinho
+          <span class="cart-link__badge" data-cart-count hidden>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Catálogo</h1>
+        <p>Filtre por categoria e adicione produtos ao carrinho para gerar eventos de tracking.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters" data-filters></div>
+        <div class="product-grid" data-catalog></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Nexus Tech — loja demo para tracking.</p>
+      <p><a href="index.html">Início</a> · <a href="carrinho.html">Carrinho</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
